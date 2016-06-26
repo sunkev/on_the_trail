@@ -26,7 +26,7 @@ A simple website that will allow users to create custom text and email notificat
   
   > **Important Attributes:** day hiker, climber, wants a quick and simple to use application, often in remote areas
   
-- Hiker's Emergency Contact
+- Hiker's Mother
 - Park Ranger
 
 
