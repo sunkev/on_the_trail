@@ -1,4 +1,4 @@
-# Trailblazers
+# Team: Trailblazers
 - Abhi Pandit - **Development Team**
 - Adarsh Binani - **Development Team**
 - Kevin Sun - **Scrum Master**
@@ -6,7 +6,7 @@
 
 
 
-# On The Trail
+# Product: On The Trail
 
 On The Trail is a notification system geared toward hikers and adventurers alike. 
 
