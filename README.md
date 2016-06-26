@@ -41,4 +41,6 @@ A simple website that will allow users to create custom text and email notificat
 
 https://trello.com/b/cLhb0bj9/product-backlog
 
+The product backlog items were ordered based on MVP (minimum viable product). We wanted to start with the most basic functionalities, putting difficulty and impact into conisderation.
+
 
