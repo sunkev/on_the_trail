@@ -14,7 +14,7 @@ On The Trail is a notification system geared toward hikers and adventurers alike
 Safer parks and trails all around the world through great communication.
 
 #### Near Vision:
-A simple website that will allow users to create custom notifications for their friends and loved ones.
+A simple website that will allow users to create custom text and email notifications for their friends and loved ones to keep everyone informed.
 
 #### Stakeholders
 - Hiker
