@@ -21,10 +21,18 @@ A simple website that will allow users to create custom text and email notificat
   ##### User Persona
 
   > **Name:** Diah Nasution
+  
+  > **Role:** hiker
+  
+  > **Photo:** :)
 
   > **Vital Stats:** 27 years old, female, travel blogger, nature lover
   
-  > **Important Attributes:** day hiker, climber, wants a quick and simple to use application, often in remote areas
+  > **Important Attributes:** day hiker, climber, often in remote areas
+  
+  > **Motivation:** To keep loved ones informed, to feel safe
+  
+  > **Desires/Wants/Needs:** wants a quick and simple to use application that can be accesed on her phone
   
 - Hiker's Mother
 - Park Ranger
