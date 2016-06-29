@@ -45,7 +45,7 @@ The product backlog items were ordered based on MVP (minimum viable product). We
 
 #### Estimating
 
-We estimated our product backlog items using "Planning Poker", albeit a somewhat modified version. We did not use cards, but individually wrote down our estimates on a piece of paper, and revealed them to eachother at the same time. Because of the size of our team, our Scrum Master and Product Owner are having to play dual roles and are also part of the Development Team. During our estimating activity, everyone acted as a member of the Development Team and participated.
+We estimated our product backlog items using "Planning Poker", albeit a somewhat modified version. We did not use cards, but individually wrote down our estimates on a piece of paper, and revealed them to each other at the same time. Because of the size of our team, our Scrum Master and Product Owner are having to play dual roles and are also part of the Development Team. During our estimating activity, everyone acted as a member of the Development Team and participated.
 
 #### Planning Our First Sprint
 
