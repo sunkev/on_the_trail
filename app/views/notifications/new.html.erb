@@ -1,0 +1,9 @@
+<%= simple_form_for(@notification, html: { class: 'form-horizontal' }) do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.input :contact_email %>
+    <%= f.input :message %>
+    <%= f.submit %>
+<% end %>
