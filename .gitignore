@@ -13,3 +13,7 @@
 /tmp
 .idea
 .idea/workspace.xml
+
+Gemfile
+config.ru
+/config/database.yml
