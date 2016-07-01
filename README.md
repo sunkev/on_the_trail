@@ -1,7 +1,7 @@
 # Team: Trailblazers
-- Abhi Pandit - **Development Team**
+- Abhi Pandit - **Scrum Master**
 - Adarsh Binani - **Development Team**
-- Kevin Sun - **Scrum Master**
+- Kevin Sun - **Development Team**
 - Muhammad Naustion - **Product Owner**
 
 
