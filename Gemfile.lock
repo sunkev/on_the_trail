@@ -41,6 +41,7 @@ GEM
     autoprefixer-rails (6.3.6.2)
       execjs
     bcrypt (3.1.11)
+    bcrypt (3.1.11-x86-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.6)
@@ -71,6 +72,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.7.0)
     globalid (0.3.6)
@@ -209,6 +212,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   devise
+  email_validator
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.15)
@@ -224,4 +228,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
