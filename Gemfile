@@ -28,6 +28,8 @@ gem 'email_validator'
 
 gem 'tzinfo-data'
 
+#Geocoding
+gem 'geokit-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

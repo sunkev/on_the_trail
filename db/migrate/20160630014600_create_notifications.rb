@@ -7,6 +7,8 @@ class CreateNotifications < ActiveRecord::Migration
       t.string :phone
       t.text   :message, null: false
       t.string :contact_email, null: false
+      t.float :latitude
+      t.float :longitude
     end
   end
 end

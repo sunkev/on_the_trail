@@ -1,4 +1,7 @@
+
 class Notification < ActiveRecord::Base
+  acts_as_mappable :lat_column_name => :latitude,
+                   :lng_column_name => :longitude
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :message, presence: true

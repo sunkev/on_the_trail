@@ -1,4 +1,12 @@
+require 'geokit'
+require 'geokit-rails'
+
 class NotificationsController < ApplicationController
+  geocode_ip_address
+  def geokit
+      @location = session[:geo_location]  # @location is a GeoLoc instance.
+  end
+
   def new
     @notification = Notification.new
   end
@@ -9,7 +17,7 @@ class NotificationsController < ApplicationController
     if @notification.valid?
       @notification.save
       NotificationMailer.send_notification(@notification.id).deliver_now
-      flash[:notice] = 'Notification was sent!'
+      flash[:notice] = 'Notification was sent ' << 'latitude ' << session[:geo_location]['lat'].to_s << " longitude " << session[:geo_location]['lng'].to_s
 
       redirect_to action: 'new'
     else
