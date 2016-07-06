@@ -5,7 +5,7 @@
     <%= f.input :email %>
     <%= f.input :contact_email %>
     <%= f.input :message %>
-    <%= f.input :latitude, input_html: {value: session[:geo_location]['lat'].round(3)}  %>
-    <%= f.input :longitude, input_html: {value: session[:geo_location]['lng'].round(3)}  %>
+    <%= f.input :latitude, input_html: {value: @lat}  %>
+    <%= f.input :longitude, input_html: {value: @lng}  %>
     <%= f.button :submit %>
 <% end %>

@@ -3,13 +3,18 @@ require 'geokit-rails'
 
 class NotificationsController < ApplicationController
   geocode_ip_address
-#  def geokit
-#      @location = session[:geo_location]  # @location is a GeoLoc instance.
-#  end
 
   def new
     @notification = Notification.new
-#    binding.pry
+
+    geo_location = session[:geo_location]
+
+    @lat, @lng = nil, nil
+
+    if geo_location
+      @lat = geo_location.lat.round(3)
+      @lng = geo_location.lng.round(3)
+    end
   end
 
   def create
@@ -18,7 +23,6 @@ class NotificationsController < ApplicationController
     if @notification.valid?
       @notification.save
       NotificationMailer.send_notification(@notification.id).deliver_now
-      #flash[:notice] = 'Notification was sent ' << 'latitude ' << session[:geo_location]['lat'].to_s << " longitude " << session[:geo_location]['lng'].to_s
       flash[:notice] = 'Notification was sent '
 
       redirect_to action: 'new'
