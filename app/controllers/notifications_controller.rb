@@ -23,7 +23,7 @@ class NotificationsController < ApplicationController
     if @notification.valid?
       @notification.save
       NotificationMailer.send_notification(@notification.id).deliver_now
-      flash[:notice] = 'Notification was sent '
+      flash[:notice] = 'Notification was sent!'
 
       redirect_to action: 'new'
     else
