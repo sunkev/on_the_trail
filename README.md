@@ -10,6 +10,8 @@
 
 On The Trail is a notification system geared toward hikers and adventurers alike. 
 
+http://onthetrail.herokuapp.com
+
 #### Far Vision:
 Safer parks and trails all around the world through great communication.
 
