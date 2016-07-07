@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'user visits page to send notification' do
   specify 'user fills out a valid form' do
-    user = User.create(first_name: 'Factory', last_name: 'Girl', email: 'helpful@gmail.com', password: 123456)
+    user = create(:user)
 
     visit new_user_session_path
     fill_in 'Email', with: user.email

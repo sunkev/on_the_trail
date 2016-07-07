@@ -8,20 +8,13 @@ class NotificationsController < ApplicationController
 
     @lat, @lng = nil, nil
 
-    if geo_location
+    if geo_location && geo_location.kind_of?(Hash)
       @lat = geo_location['lat'].round(3)
       @lng = geo_location['lng'].round(3)
+    elsif geo_location.kind_of? Geokit::GeoLoc
+      @lat = geo_location.lat.round(3)
+      @lng = geo_location.lng.round(3)
     end
-
-    @carrier_collection = [
-      {label: 'AT&T',           value: '@txt.att.net'},
-      {label: 'Boost Mobile',   value: '@myboostmobile.com'},
-      {label: 'Sprint',         value: '@messaging.sprintpcs.com'},
-      {label: 'T-Mobile',       value: '@tmomail.net'},
-      {label: 'US Cellular',    value: '@email.uscc.net'},
-      {label: 'Verizon',        value: '@vtext.com'},
-      {label: 'Virgin Mobile',  value: '@vmobl.com'},
-    ]
   end
 
   def create

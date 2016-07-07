@@ -6,39 +6,57 @@ describe Notification do
   it { should validate_presence_of(:contact_email) }
   it { should validate_presence_of(:message) }
 
-  let(:notification) { Notification.create(first_name: 'John', last_name: 'smith',
-    contact_email: 'john@john.com', message: 'AHhh!', latitude: 30, longitude: 45,
-    carrier: '@myboostmobile.com', contact_phone: '9789789789')}
-
   it 'has a first name' do
-    expect(notification.first_name).to eql 'John'
+    first_name = 'John'
+    notification = create(:notification, first_name: first_name)
+    expect(notification.first_name).to eql first_name
   end
 
   it 'has a last name' do
-    expect(notification.last_name).to eql 'smith'
+    last_name = 'smith'
+    notification = create(:notification, last_name: last_name)
+    expect(notification.last_name).to eql last_name
   end
 
   it 'has a contact email' do
-    expect(notification.contact_email).to eql 'john@john.com'
+    contact_email = 'john@john.com'
+    notification = create(:notification, contact_email: contact_email)
+    expect(notification.contact_email).to eql contact_email
   end
 
   it 'has a message' do
-    expect(notification.message).to eql 'AHhh!'
+    message = 'AHhh!'
+    notification = create(:notification, message: message)
+    expect(notification.message).to eql message
   end
 
   it 'has a latitude' do
-    expect(notification.latitude).to eql 30.0
+    latitude = 30.0
+    notification = create(:notification, latitude: latitude)
+    expect(notification.latitude).to eql latitude
   end
 
   it 'has a longitude' do
-    expect(notification.longitude).to eql 45.0
+    longitude = 45.0
+    notification = create(:notification, longitude: longitude)
+    expect(notification.longitude).to eql longitude
   end
 
   it 'has a contact phone number' do
-    expect(notification.contact_phone).to eql '9789789789'
+    contact_phone = '9789789789'
+    notification = create(:notification, contact_phone: contact_phone)
+    expect(notification.contact_phone).to eql contact_phone
   end
 
   it 'has a carrier' do
-    expect(notification.carrier).to eql '@myboostmobile.com'
+    carrier = '@myboostmobile.com'
+    notification = create(:notification, carrier: carrier)
+    expect(notification.carrier).to eql carrier
+  end
+
+  it 'does not accept fake carriers' do
+    carrier = '@windowcleaner.com'
+    notification = build(:notification, carrier: carrier)
+    expect(notification.valid?).to eql false
   end
 end

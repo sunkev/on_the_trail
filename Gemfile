@@ -40,6 +40,8 @@ gem 'geokit-rails'
 # gem 'capistrano-rails', group: :development
 
 group :test do
+  gem 'factory_girl_rails'
+  gem 'launchy'
   gem 'rspec-rails', '~> 3.4'
   gem 'capybara'
   gem 'shoulda-matchers', '~> 3.1'
