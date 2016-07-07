@@ -70,3 +70,16 @@ For the next 24 hours, we have split into pairs and will do pair programming. Ke
 All of us have plans that would be taking up the majority of our time during this long weekend. To remove this impediment we are putting in extra work these first 48 hours to burndown enough story points to keep us on track to complete our goal.
 
 In total we currently have 12 test cases for our notification and user models. You can view these test cases in the following directory of our repo: https://github.com/sunkev/on_the_trail/tree/master/spec/models
+
+# Continue Sprinting
+
+In the past 24 hours, our team worked on the following product backlog items: “Create a “hiker” account”, “mobile friendly front end”, and “GPS coordinates included in activity information”. We continued our pair programming strategy, so Kevin and Adarsh worked together on adding GPS coordinates to the notifications, and they also were able to get the framework for user accounts integrated. Muhammad and Abhimanyu paired up to work on the front-end, integrating bootstrap for a responsive layout.
+
+In the next 24 hours the team will work on our last 2 product backlog items for this sprint: “Post-activity notification by e-mail” and “Notification can be sent by SMS”. Kevin and Adarsh will pair up to work on both of these stories, while Muhammad and Abhimanyu will help with researching possible solutions. Abhimanyu will also start preparation of our sprint review, and Muhammad will continue refactoring the user account model along with its associated views.
+
+We are back on track to finish all of our stories for this sprint, and don’t see any impediments in our way.
+
+![Pair Programming 1](http://i.imgur.com/tYzUIOd.jpg)
+
+![Pair Programming 2](http://i.imgur.com/c5Yflu9.jpg)
+
