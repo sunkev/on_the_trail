@@ -17,16 +17,17 @@ ActiveRecord::Schema.define(version: 20160707013913) do
   enable_extension "plpgsql"
 
   create_table "notifications", force: :cascade do |t|
-    t.string "first_name",    null: false
-    t.string "last_name",     null: false
-    t.string "email"
-    t.string "phone"
-    t.text   "message",       null: false
-    t.string "contact_email", null: false
-    t.float  "latitude"
-    t.float  "longitude"
-    t.string "contact_phone", null: false
-    t.string "carrier",       null: false
+    t.string   "first_name",        null: false
+    t.string   "last_name",         null: false
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message",           null: false
+    t.string   "contact_email",     null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "contact_phone",     null: false
+    t.string   "carrier",           null: false
+    t.datetime "notification_date"
   end
 
   create_table "users", force: :cascade do |t|
