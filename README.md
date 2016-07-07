@@ -55,4 +55,16 @@ We have forecasted our velocity to be 20 story points per one week sprint. We ag
 
 https://docs.google.com/spreadsheets/d/1HypDff6afBlkqrpq2slrm-Uimuk_0VWM_T3JQQvUN0M/edit?usp=sharing
 
+# Start Sprinting
 
+We began our first sprint on Wednesday night right after class. We did a 1.5 hour long mob programming session and were able to complete our first story, "Host basic rails app". Kevin played the role of lead navigator for most of the session, since he has the most experience with Ruby on Rails and the overall architecture of a Rails web application.
+
+![Mob Programming in Action](http://i.imgur.com/P6lcq8o.jpg)
+ 
+After getting a basic rails app up and running, we began on our next story to build an input form for users to create notifications. We started by creating test cases for all of the input fields, then proceeded in actually making the model and controller to satisfy those test cases.
+
+For the next 24 hours, we have split into pairs and will do pair programming. Kevin and Adarsh will be working on creating users accounts for the application. Muhammad and Abhi will start on incorporating Bootstrap and begin styling the front end.
+
+All of us have plans that would be taking up the majority of our time during this long weekend. To remove this impediment we are putting in extra work these first 48 hours to burndown enough story points to keep us on track to complete our goal.
+
+In total we currently have 12 test cases for our notification and user models. You can view these test cases in the following directory of our repo: https://github.com/sunkev/on_the_trail/tree/master/spec/models
