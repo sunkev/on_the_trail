@@ -30,6 +30,9 @@ gem 'tzinfo-data'
 
 #Geocoding
 gem 'geokit-rails'
+
+#delayed job
+gem 'sidekiq'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -35,6 +35,7 @@ class NotificationsController < ApplicationController
       mailer = NotificationMailer
       mailer.send_notification(@notification.id).deliver_now
       mailer.send_sms(@notification.id).deliver_now
+      NotificationJob.set(wait_until: @notification.notification_date).perform_later(@notification.id)
 
       flash[:notice] = 'Notification was sent!'
     else
@@ -47,6 +48,7 @@ class NotificationsController < ApplicationController
 
   def notification_params
     params.require(:notification).permit(:first_name, :last_name,
-      :email, :phone, :contact_email, :message, :latitude, :longitude, :contact_phone, :carrier)
+      :email, :phone, :contact_email, :message, :latitude, :longitude, :contact_phone, :carrier,
+      :notification_date)
   end
 end
