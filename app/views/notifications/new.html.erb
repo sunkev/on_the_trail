@@ -1,7 +1,7 @@
 <%= simple_form_for(@notification, html: { class: 'form-horizontal' }) do |f| %>
     <%= f.input :first_name, input_html: {value: current_user.first_name} %>
     <%= f.input :last_name, input_html: {value: current_user.last_name} %>
-    <%= f.input :phone %>
+    <%= f.input :phone, input_html: {value: current_user.phone} %>
     <%= f.input :email, input_html: {value: current_user.email} %>
     <%= f.input :contact_email %>
     <%= f.input :contact_phone %>
