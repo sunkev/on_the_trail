@@ -8,9 +8,12 @@ class NotificationsController < ApplicationController
 
     @lat, @lng = nil, nil
 
-    if geo_location
+    if geo_location && geo_location.kind_of?(Hash)
       @lat = geo_location['lat'].round(3)
       @lng = geo_location['lng'].round(3)
+    elsif geo_location.kind_of? Geokit::GeoLoc
+      @lat = geo_location.lat.round(3)
+      @lng = geo_location.lng.round(3)
     end
 
     @carrier_collection = [
