@@ -14,3 +14,4 @@
 config.ru
 /config/database.yml
 .idea
+.env

@@ -4,6 +4,10 @@
     <%= f.input :phone %>
     <%= f.input :email, input_html: {value: current_user.email} %>
     <%= f.input :contact_email %>
+    <%= f.input :contact_phone %>
+    <%= f.input :carrier, collection: @carrier_collection,
+        label_method: Proc.new {|carrier| carrier[:label]},
+        value_method: Proc.new {|carrier| carrier[:value]} %>
     <%= f.input :message %>
     <%= f.input :latitude, input_html: {value: @lat}  %>
     <%= f.input :longitude, input_html: {value: @lng}  %>

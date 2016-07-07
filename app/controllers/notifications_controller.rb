@@ -1,6 +1,3 @@
-require 'geokit'
-require 'geokit-rails'
-
 class NotificationsController < ApplicationController
   geocode_ip_address
 
@@ -12,9 +9,19 @@ class NotificationsController < ApplicationController
     @lat, @lng = nil, nil
 
     if geo_location
-      @lat = geo_location.lat.round(3)
-      @lng = geo_location.lng.round(3)
+      @lat = geo_location['lat'].round(3)
+      @lng = geo_location['lng'].round(3)
     end
+
+    @carrier_collection = [
+      {label: 'AT&T',           value: '@txt.att.net'},
+      {label: 'Boost Mobile',   value: '@myboostmobile.com'},
+      {label: 'Sprint',         value: '@messaging.sprintpcs.com'},
+      {label: 'T-Mobile',       value: '@tmomail.net'},
+      {label: 'US Cellular',    value: '@email.uscc.net'},
+      {label: 'Verizon',        value: '@vtext.com'},
+      {label: 'Virgin Mobile',  value: '@vmobl.com'},
+    ]
   end
 
   def create
@@ -22,20 +29,21 @@ class NotificationsController < ApplicationController
 
     if @notification.valid?
       @notification.save
-      NotificationMailer.send_notification(@notification.id).deliver_now
-      flash[:notice] = 'Notification was sent!'
+      mailer = NotificationMailer
+      mailer.send_notification(@notification.id).deliver_now
+      mailer.send_sms(@notification.id).deliver_now
 
-      redirect_to action: 'new'
+      flash[:notice] = 'Notification was sent!'
     else
       flash[:alert] = 'Notification errored!'
-      redirect_to action: 'new'
     end
+    redirect_to action: 'new'
   end
 
   private
 
   def notification_params
     params.require(:notification).permit(:first_name, :last_name,
-      :email, :phone, :contact_email, :message, :latitude, :longitude)
+      :email, :phone, :contact_email, :message, :latitude, :longitude, :contact_phone, :carrier)
   end
 end
