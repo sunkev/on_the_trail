@@ -69,7 +69,7 @@ For the next 24 hours, we have split into pairs and will do pair programming. Ke
 
 All of us have plans that would be taking up the majority of our time during this long weekend. To remove this impediment we are putting in extra work these first 48 hours to burndown enough story points to keep us on track to complete our goal.
 
-In total we currently have 12 test cases for our notification and user models. You can view these test cases in the following directory of our repo: https://github.com/sunkev/on_the_trail/tree/master/spec/models
+In total we currently have 12 test cases for our notification and user models. You can view these test cases in the following directory of our repo: https://github.com/sunkev/on_the_trail/tree/master/spec/
 
 # Continue Sprinting
 
@@ -79,7 +79,9 @@ In the next 24 hours the team will work on our last 2 product backlog items for 
 
 We are back on track to finish all of our stories for this sprint, and don’t see any impediments in our way.
 
+We are continuing to use test driven development and currently have 25 unit tests. You can view these test cases in the following directory of our repo: https://github.com/sunkev/on_the_trail/tree/master/spec/
+
+
 ![Pair Programming 1](http://i.imgur.com/tYzUIOd.jpg)
 
 ![Pair Programming 2](http://i.imgur.com/c5Yflu9.jpg)
-
