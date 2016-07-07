@@ -7,7 +7,8 @@ describe Notification do
   it { should validate_presence_of(:message) }
 
   let(:notification) { Notification.create(first_name: 'John', last_name: 'smith',
-    contact_email: 'john@john.com', message: 'AHhh!', latitude: 30, longitude: 45)}
+    contact_email: 'john@john.com', message: 'AHhh!', latitude: 30, longitude: 45,
+    carrier: '@myboostmobile.com', contact_phone: '9789789789')}
 
   it 'has a first name' do
     expect(notification.first_name).to eql 'John'
@@ -31,5 +32,13 @@ describe Notification do
 
   it 'has a longitude' do
     expect(notification.longitude).to eql 45.0
+  end
+
+  it 'has a contact phone number' do
+    expect(notification.contact_phone).to eql '9789789789'
+  end
+
+  it 'has a carrier' do
+    expect(notification.carrier).to eql '@myboostmobile.com'
   end
 end

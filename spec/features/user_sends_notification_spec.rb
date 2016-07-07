@@ -15,6 +15,8 @@ feature 'user visits page to send notification' do
     fill_in 'Email', with: 'fake@notreal.com'
     fill_in 'Contact email', with: 'mom@notreal.com'
     fill_in 'Message', with: 'Nothing is going wrong?'
+    select 'Verizon', from: 'Carrier'
+    fill_in 'Contact phone', with: '9789789789'
 
     click_on 'Create Notification'
 
